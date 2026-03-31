@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/industrial_input"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_placeholder"
+            android:scaleType="centerInside" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B-TRAK"
+        android:textColor="@color/industrial_orange"
+        android:textSize="24sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS: testingtesting"
+        android:textColor="#F5F5F5"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="48dp"/>
+
+    <EditText
+        android:id="@+id/input_user"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/industrial_input"
+        android:hint="[USER]"
+        android:textColorHint="#666666"
+        android:textColor="#F5F5F5"
+        android:fontFamily="monospace"
+        android:paddingStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/industrial_input"
+        android:fontFamily="monospace"
+        android:hint="[PASSWORD]"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:textColor="@color/workshop_white"
+        android:textColorHint="#666666" />
+
+    <Button
+        android:id="@+id/btn_initiate"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:backgroundTint="@color/industrial_orange"
+        android:text="INITIATE_SESSION para chada"
+        android:textColor="@color/industrial_black"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO ACCOUNT?"
+            android:textColor="@color/scuffed_metal"
+            android:textSize="12sp"
+            android:fontFamily="monospace"/>
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" [REGISTER HERE ->]"
+            android:textColor="@color/industrial_orange"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/industrial_input"
+            android:backgroundTint="#1A1A1A"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:background="@color/industrial_orange"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B-TRAK"
+                    android:textColor="@color/industrial_orange"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STATION: BICYCLE DETAILS"
+                    android:textColor="@color/workshop_white"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_placeholder"
+                android:padding="16dp"
+                android:background="@drawable/industrial_input"
+                android:backgroundTint="#1A1A1A"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/detail_bike_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPANKER R1"
+                android:textColor="@color/workshop_white"
+                android:textSize="24sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/detail_bike_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Road Bike"
+                android:textColor="@color/galvanized_steel"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/industrial_input"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lifetime Distance"
+                android:textColor="@color/galvanized_steel"
+                android:textSize="11sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/detail_total_km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1245.8 KM"
+                android:textColor="@color/industrial_orange"
+                android:textSize="32sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Status"
+                android:textColor="@color/galvanized_steel"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="READY TO RIDE"
+                android:textColor="@color/industrial_orange"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:background="@drawable/industrial_input"
+                android:backgroundTint="#252525"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_record_service"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="RECORD SERVICE"
+            android:backgroundTint="#222222"
+            android:textColor="@color/workshop_white"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="12dp"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btn_remove_bike"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="DELETE VEHICLE"
+            android:backgroundTint="#331111"
+            android:textColor="#FF4444"
+            android:fontFamily="monospace"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+</ScrollView>

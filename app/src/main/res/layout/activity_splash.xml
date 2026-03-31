@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/industrial_black"
+    android:padding="32dp"
+    android:gravity="center">   
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B-TRAK"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/industrial_orange"
+            android:letterSpacing="0.05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANALYTICS KERNEL"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/workshop_white"
+            android:letterSpacing="0.3"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/splash_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="68"
+            android:max="100"
+            android:progressDrawable="@drawable/segmented_progress"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_loading_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading... 68%"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/workshop_white"/>
+    </LinearLayout>
+
+</LinearLayout>

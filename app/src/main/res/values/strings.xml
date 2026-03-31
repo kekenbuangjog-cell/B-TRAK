@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">B-TRAK</string>
+
+    <string-array name="bike_types">
+        <item>[ SELECT_TYPE ]</item>
+        <item>MTB_XC (Cross Country)</item>
+        <item>ROAD_AERO (Racing)</item>
+        <item>FIXED_GEAR (City/Track)</item>
+        <item>GRAVEL_EXPLORER (Adventure)</item>
+        <item>BMX_STREET (Trick/Park)</item>
+    </string-array>
+
+</resources>
