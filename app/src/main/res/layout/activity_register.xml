@@ -9,16 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:padding="32dp">
 
         <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@drawable/industrial_input"
             android:padding="8dp"
-            android:layout_marginBottom="16dp">
-
+            android:layout_marginBottom="12dp">
             <ImageView
                 android:id="@+id/register_logo"
                 android:layout_width="match_parent"
@@ -32,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="B-TRAK"
             android:textColor="@color/industrial_orange"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:fontFamily="monospace"
             android:textStyle="bold"
             android:layout_marginBottom="4dp"/>
@@ -40,70 +39,70 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create New Account"
+            android:text="REGISTER"
             android:textColor="#F5F5F5"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:fontFamily="monospace"
-            android:layout_marginBottom="40dp"/>
+            android:layout_marginBottom="24dp"/>
 
         <EditText
             android:id="@+id/reg_user"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="54dp"
             android:background="@drawable/industrial_input"
-            android:hint="Username"
+            android:hint="[Username]"
             android:textColorHint="#666666"
             android:textColor="#F5F5F5"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:inputType="text"/>
 
         <EditText
             android:id="@+id/reg_email"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="54dp"
             android:background="@drawable/industrial_input"
-            android:hint="Email Address"
+            android:hint="[Email Address]"
             android:textColorHint="#666666"
             android:textColor="#F5F5F5"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/reg_pass"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="54dp"
             android:background="@drawable/industrial_input"
-            android:hint="Password"
+            android:hint="[Password]"
             android:textColorHint="#666666"
             android:textColor="#F5F5F5"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/reg_confirm_pass"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="54dp"
             android:background="@drawable/industrial_input"
-            android:hint="Confirm Password"
+            android:hint="[Confirm Password]"
             android:textColorHint="#666666"
             android:textColor="#F5F5F5"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/btn_register_account"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="60dp"
             android:backgroundTint="@color/industrial_orange"
-            android:text="Create Account"
+            android:text="SUBMIT"
             android:textColor="@color/industrial_black"
             android:fontFamily="monospace"
             android:textStyle="bold"
@@ -113,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:gravity="center">
 
             <TextView
@@ -121,16 +120,16 @@
                 android:layout_height="wrap_content"
                 android:text="ALREADY REGISTERED?"
                 android:textColor="@color/galvanized_steel"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:fontFamily="monospace"/>
 
             <TextView
                 android:id="@+id/text_back_to_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" [ LOGIN HERE ]"
+                android:text=" [ LOGIN ]"
                 android:textColor="@color/industrial_orange"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:textStyle="bold"
                 android:fontFamily="monospace"
                 android:padding="8dp"

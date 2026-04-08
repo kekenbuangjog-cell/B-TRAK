@@ -1,17 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.BTRAK" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/industrial_orange</item>
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BTRAK.ZeroRadius</item>
     </style>
 
     <style name="Theme.BTRAK" parent="Base.Theme.BTRAK" />
 
+    <style name="Theme.BTRAK.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">#121212</item>
+    </style>
+
     <style name="ShapeAppearance.BTRAK.ZeroRadius" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">0dp</item> </style>
-
+        <item name="cornerSize">0dp</item>
+    </style>
 
 </resources>

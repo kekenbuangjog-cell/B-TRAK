@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
+    android:fillViewport="true"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="32dp">
@@ -33,13 +36,14 @@
         android:layout_marginBottom="4dp"/>
 
     <TextView
+        android:id="@+id/status_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="STATUS: testingtesting"
+        android:text="SYSTEM: READY"
         android:textColor="#F5F5F5"
         android:textSize="10sp"
         android:fontFamily="monospace"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="32dp"/>
 
     <EditText
         android:id="@+id/input_user"
@@ -72,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:backgroundTint="@color/industrial_orange"
-        android:text="INITIATE_SESSION para chada"
+        android:text="LOGIN"
         android:textColor="@color/industrial_black"
         android:fontFamily="monospace"
         android:textStyle="bold"
@@ -89,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NO ACCOUNT?"
-            android:textColor="@color/scuffed_metal"
+            android:textColor="@color/galvanized_steel"
             android:textSize="12sp"
             android:fontFamily="monospace"/>
 
@@ -109,3 +113,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>
