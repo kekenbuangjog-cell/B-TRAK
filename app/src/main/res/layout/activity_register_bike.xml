@@ -72,7 +72,7 @@
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="24dp"
-            android:inputType="textCapCharacters"/>
+            android:inputType="text" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -92,8 +92,9 @@
             android:paddingStart="16dp"
             android:layout_marginBottom="48dp"
             android:entries="@array/bike_types"
-            android:spinnerMode="dropdown"/>
-
+            android:spinnerMode="dropdown"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:popupBackground="#222222" />
         <Button
             android:id="@+id/btn_add_to_garage"
             android:layout_width="match_parent"

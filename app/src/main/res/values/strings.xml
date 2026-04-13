@@ -1,13 +1,17 @@
 <resources>
     <string name="app_name">B-TRAK</string>
 
-    <string-array name="bike_types">
-        <item>[ SELECT_TYPE ]</item>
-        <item>MTB_XC (Cross Country)</item>
-        <item>ROAD_AERO (Racing)</item>
-        <item>FIXED_GEAR (City/Track)</item>
-        <item>GRAVEL_EXPLORER (Adventure)</item>
-        <item>BMX_STREET (Trick/Park)</item>
-    </string-array>
+    <string name="btn_back_label">&lt; [ BACK_TO_GARAGE ]</string>
+    <string name="status_ready">SYSTEM: READY</string>
+    <string name="status_error_empty">STATUS: ERROR_DATA_MISSING</string>
 
+    <string-array name="bike_types">
+        <item>[ SELECT TYPE ]</item>
+        <item>MTB XC (Cross Country)</item>
+        <item>ROAD AERO (Racing)</item>
+        <item>FIXED GEAR (City/Track)</item>
+        <item>GRAVEL EXPLORER (Adventure)</item>
+        <item>BMX STREET (Trick/Park)</item>
+        <item>COMMUTER BIKE(Ordinary)</item>
+    </string-array>
 </resources>
