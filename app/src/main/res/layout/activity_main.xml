@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="?android:attr/windowBackground"
     android:fillViewport="true">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/industrial_input"
-            android:backgroundTint="#1A1A1A"
+            android:backgroundTint="@color/industrial_surface"
             android:padding="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Station: My Garage"
-                    android:textColor="@color/galvanized_steel"
+                    android:textColor="?android:attr/textColorSecondary"
                     android:textSize="10sp"
                     android:fontFamily="monospace"/>
             </LinearLayout>
@@ -62,6 +62,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="?android:attr/textColorPrimary"
                 android:layout_marginEnd="16dp"/>
 
             <ImageView
@@ -89,7 +90,7 @@
             android:layout_marginBottom="32dp"
             android:clickable="true"
             android:focusable="true"
-            android:backgroundTint="#1A1A1A">
+            android:backgroundTint="@color/industrial_surface">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -104,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="[ REGISTER NEW BIKE ]"
-                android:textColor="@color/workshop_white"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="12sp"
                 android:fontFamily="monospace" />
         </LinearLayout>
@@ -113,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My BICYCLES"
-            android:textColor="@color/workshop_white"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="14sp"
             android:fontFamily="monospace"
             android:textStyle="bold"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Semantic Colors (Dark Mode Mirror) -->
+    <color name="industrial_bg">#121212</color>
+    <color name="industrial_surface">#1A1A1A</color>
+    <color name="text_main">#F5F5F5</color>
+    <color name="text_sub">#8E8E8E</color>
+    <color name="industrial_destructive_bg">#222222</color>
+    <color name="switch_track">#333333</color>
+</resources>

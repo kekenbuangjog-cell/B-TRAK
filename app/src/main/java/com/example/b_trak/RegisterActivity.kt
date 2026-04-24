@@ -6,31 +6,32 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
+/**
+ * REGISTRATION_PROTOCOL: Placeholder for account creation services.
+ * Currently serves as a UI prototype for account expansion.
+ */
 class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // 1. Link the "LOGIN" text at the bottom
+        // UI_BINDING: Identify return navigation and registration trigger
         val btnLoginLink = findViewById<TextView>(R.id.text_back_to_login)
-
-        // 2. Link the "EXECUTE_REGISTRATION" button
         val btnRegister = findViewById<Button>(R.id.btn_register_account)
 
-        // Navigation: Go back to Login screen
+        // NAVIGATION: Return to the Authentication Station
         btnLoginLink.setOnClickListener {
-            // finish() simply closes this screen and reveals
-            // the LoginActivity that is already sitting underneath.
+            // PROTOCOL: Termination of current context to reveal previous Activity
             finish()
         }
 
-        // Action: Placeholder for Sprint 2 Database work
+        // ACTION: Initiate Registration Protocol (Placeholder)
         btnRegister.setOnClickListener {
-            // For now, we just show a "vibe" message
+            // STATUS: Mocking data uplink for the prototype
             Toast.makeText(this, "INITIALIZING_DATA_UPLINK...", Toast.LENGTH_SHORT).show()
 
-            // Logic for saving to SQLite goes here in the next sprint!
+            // FUTURE_INTEGRATION: SQLite/Room database implementation scheduled for Sprint 2.
         }
     }
 }

@@ -10,4 +10,12 @@
     <color name="brushed_metal">#4D4D4D</color>
     <color name="galvanized_steel">#8E8E8E</color>
 
+    <!-- Semantic Colors (Light Mode) -->
+    <color name="industrial_bg">#F5F5F5</color>
+    <color name="industrial_surface">#FFFFFF</color>
+    <color name="text_main">#121212</color>
+    <color name="text_sub">#4D4D4D</color>
+    <color name="industrial_destructive_bg">#E0E0E0</color>
+    <color name="switch_track">#BDBDBD</color>
+
 </resources>

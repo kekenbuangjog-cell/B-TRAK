@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="?android:attr/windowBackground"
     android:fillViewport="true">
 
     <LinearLayout
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/industrial_input"
-            android:backgroundTint="#1A1A1A"
+            android:backgroundTint="@color/industrial_surface"
             android:padding="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="STATION: NEW REGISTRATION"
-                    android:textColor="@color/workshop_white"
+                    android:textColor="?android:attr/textColorSecondary"
                     android:textSize="10sp"
                     android:fontFamily="monospace"/>
             </LinearLayout>
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bicycle Name"
-            android:textColor="@color/galvanized_steel"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"
             android:fontFamily="monospace"
             android:layout_marginBottom="8dp"
@@ -67,8 +67,8 @@
             android:layout_height="56dp"
             android:background="@drawable/industrial_input"
             android:hint="Enter name (e.g. Mamachari bike)"
-            android:textColorHint="#444444"
-            android:textColor="@color/workshop_white"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="24dp"
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bicycle Type"
-            android:textColor="@color/galvanized_steel"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"
             android:fontFamily="monospace"
             android:layout_marginBottom="8dp"
@@ -93,8 +93,7 @@
             android:layout_marginBottom="48dp"
             android:entries="@array/bike_types"
             android:spinnerMode="dropdown"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            android:popupBackground="#222222" />
+            android:theme="?android:attr/spinnerStyle" />
         <Button
             android:id="@+id/btn_add_to_garage"
             android:layout_width="match_parent"

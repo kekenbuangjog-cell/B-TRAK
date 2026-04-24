@@ -2,9 +2,11 @@ package com.example.b_trak
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,12 +21,34 @@ class MainActivity : AppCompatActivity() {
         // 2. Find the RecyclerView in your XML
         recyclerView = findViewById(R.id.recycler_garage)
 
-        // 3. Setup the "+" button
+        // 3. Setup the buttons
         val btnAddBike = findViewById<LinearLayout>(R.id.box_add_bike)
         btnAddBike.setOnClickListener {
             val intent = Intent(this, RegisterBikeActivity::class.java)
             startActivity(intent)
         }
+
+        val btnSettings = findViewById<ImageView>(R.id.btn_settings)
+        btnSettings.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnQuit = findViewById<ImageView>(R.id.btn_quit)
+        btnQuit.setOnClickListener {
+            showShutdownDialog()
+        }
+    }
+
+    private fun showShutdownDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("SYSTEM_SHUTDOWN")
+            .setMessage("Are you sure you want to close and log out?")
+            .setPositiveButton("CONFIRM") { _, _ ->
+                finishAffinity()
+            }
+            .setNegativeButton("CANCEL", null)
+            .show()
     }
 
     override fun onResume() {

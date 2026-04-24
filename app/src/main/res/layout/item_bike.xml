@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/industrial_input"
+    android:backgroundTint="@color/industrial_surface"
     android:orientation="horizontal"
     android:padding="16dp"
     android:gravity="center_vertical"
@@ -15,7 +16,8 @@
         android:layout_height="50dp"
         android:src="@drawable/logo_placeholder"
         android:padding="8dp"
-        android:background="#222222"/>
+        android:background="?android:attr/windowBackground"
+        app:tint="?android:attr/textColorPrimary" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -29,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BIKE_NAME"
-            android:textColor="@color/workshop_white"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="16sp"
             android:fontFamily="monospace"
             android:textStyle="bold"/>
@@ -39,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TYPE: UNKNOWN"
-            android:textColor="@color/galvanized_steel"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="10sp"
             android:fontFamily="monospace"/>
     </LinearLayout>

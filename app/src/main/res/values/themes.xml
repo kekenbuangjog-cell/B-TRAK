@@ -3,6 +3,9 @@
 
     <style name="Base.Theme.BTRAK" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/industrial_orange</item>
+        <item name="android:windowBackground">@color/industrial_bg</item>
+        <item name="colorSurface">@color/industrial_surface</item>
+        <item name="android:textColorPrimary">@color/text_main</item>
         <item name="shapeAppearanceOverlay">@style/ShapeAppearance.BTRAK.ZeroRadius</item>
     </style>
 

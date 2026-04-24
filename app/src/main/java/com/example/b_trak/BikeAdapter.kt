@@ -11,48 +11,55 @@ import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
 import android.widget.Toast
 
-// This class is the "Valet" that handles your bike cards
+/**
+ * UI_PROTOCOL: BikeAdapter handles the mapping of Bike data models to visual list components (RecyclerView).
+ * It manages individual item state and user interactions (Edit/Delete).
+ */
 class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeAdapter.BikeViewHolder>() {
 
-    // 1. This "inflates" your item_bike.xml layout (the card)
+    /**
+     * INFLATION_PROTOCOL: Generates the visual container (ViewHolder) for a single bike unit.
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BikeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_bike, parent, false)
         return BikeViewHolder(view)
     }
 
-    // 2. This fills the card with the actual bike data (Name and Type)
+    /**
+     * DATA_BINDING: Connects properties from a Bike object to the specific UI elements in a card.
+     */
     override fun onBindViewHolder(holder: BikeViewHolder, position: Int) {
         val currentBike = bikeList[position]
         holder.nameText.text = currentBike.name
         holder.typeText.text = "TYPE: ${currentBike.type}"
 
-        // 1. Listen for the click on the 3 dots
+        // ACTION: Initialize Context Menu for the specific unit
         holder.menuBtn.setOnClickListener { view ->
             val context = view.context
 
-            // 2. Create the PopupMenu (Just like Java!)
+            // PROTOCOL: INDUSTRIAL_POPUP_MENU
             val popup = PopupMenu(context, view)
-            popup.menu.add("EDIT_UNIT")
-            popup.menu.add("DELETE_UNIT")
+            popup.menu.add("EDIT UNIT")
+            popup.menu.add("DELETE UNIT")
 
             popup.setOnMenuItemClickListener { item ->
                 when (item.title) {
-                    "DELETE_UNIT" -> {
-                        // 3. Show the Confirmation Dialog
+                    "DELETE UNIT" -> {
+                        // PROTOCOL: DELETION_CONFIRMATION
                         AlertDialog.Builder(context)
                             .setTitle("CONFIRM_DELETION")
                             .setMessage("Are you sure you want to remove ${currentBike.name} from the garage?")
                             .setPositiveButton("YES") { _, _ ->
-                                // 4. Remove from the "In-Memory" list
+                                // DATA_MODIFICATION: Remove from the Singleton GarageManager
                                 GarageManager.myGarage.removeAt(holder.adapterPosition)
 
-                                // 5. Refresh the list so it disappears immediately
+                                // UI_SYNC: Immediate refresh of the list component
                                 notifyItemRemoved(holder.adapterPosition)
                                 notifyItemRangeChanged(holder.adapterPosition, itemCount)
 
                                 Toast.makeText(context, "UNIT_REMOVED", Toast.LENGTH_SHORT).show()
                             }
-                            .setNegativeButton("NO", null) // "null" just closes the dialog
+                            .setNegativeButton("NO", null)
                             .show()
                         true
                     }
@@ -67,10 +74,14 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
         }
     }
 
-    // 3. Tells the list how many bikes to show
+    /**
+     * SYSTEM_QUERY: Returns the total count of active units in the provided list.
+     */
     override fun getItemCount(): Int = bikeList.size
 
-    // This "ViewHolder" holds the IDs for one single card
+    /**
+     * UI_CACHE: Holds references to the views within a single item card to optimize scrolling performance.
+     */
     class BikeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameText: TextView = itemView.findViewById(R.id.text_item_name)
         val typeText: TextView = itemView.findViewById(R.id.text_item_type)

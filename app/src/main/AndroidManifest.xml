@@ -40,9 +40,10 @@
         <activity android:name=".RegisterBikeActivity"
             android:exported="false"
             android:windowSoftInputMode="stateHidden"/>
-        <!--<activity android:name=".BikeDetailsActivity" android:exported="false" />
-        <activity android:name=".SettingsActivity" android:exported="false" />
--->
+
+        <activity android:name=".SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
 
 
     </application>

@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="?android:attr/windowBackground"
     android:fillViewport="true">
 
     <LinearLayout
@@ -23,7 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/logo_placeholder"
-                android:scaleType="centerInside" />
+                android:scaleType="centerInside"
+                app:tint="?android:attr/textColorPrimary" xmlns:app="http://schemas.android.com/apk/res-auto" />
         </FrameLayout>
 
         <TextView
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="REGISTER"
-            android:textColor="#F5F5F5"
+            android:textColor="?android:attr/textColorPrimary"
             android:textSize="10sp"
             android:fontFamily="monospace"
             android:layout_marginBottom="24dp"/>
@@ -51,8 +52,8 @@
             android:layout_height="54dp"
             android:background="@drawable/industrial_input"
             android:hint="[Username]"
-            android:textColorHint="#666666"
-            android:textColor="#F5F5F5"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="12dp"
@@ -64,8 +65,8 @@
             android:layout_height="54dp"
             android:background="@drawable/industrial_input"
             android:hint="[Email Address]"
-            android:textColorHint="#666666"
-            android:textColor="#F5F5F5"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="12dp"
@@ -77,8 +78,8 @@
             android:layout_height="54dp"
             android:background="@drawable/industrial_input"
             android:hint="[Password]"
-            android:textColorHint="#666666"
-            android:textColor="#F5F5F5"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="12dp"
@@ -90,8 +91,8 @@
             android:layout_height="54dp"
             android:background="@drawable/industrial_input"
             android:hint="[Confirm Password]"
-            android:textColorHint="#666666"
-            android:textColor="#F5F5F5"
+            android:textColorHint="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:fontFamily="monospace"
             android:paddingStart="16dp"
             android:layout_marginBottom="24dp"
@@ -119,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ALREADY REGISTERED?"
-                android:textColor="@color/galvanized_steel"
+                android:textColor="?android:attr/textColorSecondary"
                 android:textSize="11sp"
                 android:fontFamily="monospace"/>
 
