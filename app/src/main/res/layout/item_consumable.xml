@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/industrial_input"
+    android:backgroundTint="@color/industrial_surface"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/text_part_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PART_NAME"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STABLE"
+            android:textColor="@color/industrial_orange"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/industrial_input"
+            android:backgroundTint="@color/industrial_destructive_bg"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LAST_REPLACED"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="9sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/text_last_replaced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0 KM"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SERVICE_INTERVAL"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="9sp"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/text_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000.0 KM"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="12sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_wear"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="12dp"
+        android:progressDrawable="@drawable/segmented_progress"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false"/>
+
+</LinearLayout>

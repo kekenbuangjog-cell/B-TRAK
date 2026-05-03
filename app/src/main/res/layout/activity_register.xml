@@ -22,9 +22,8 @@
                 android:id="@+id/register_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/logo_placeholder"
-                android:scaleType="centerInside"
-                app:tint="?android:attr/textColorPrimary" xmlns:app="http://schemas.android.com/apk/res-auto" />
+                android:src="@drawable/ic_btrak_official"
+                android:scaleType="centerInside" />
         </FrameLayout>
 
         <TextView

@@ -1,6 +1,8 @@
 package com.example.b_trak
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
@@ -22,6 +24,12 @@ class RegisterBikeActivity : AppCompatActivity() {
         val spinnerType = findViewById<Spinner>(R.id.spinner_bike_type)
         val btnAdd = findViewById<Button>(R.id.btn_add_to_garage)
 
+        // ADAPTER_SETUP: Configure the spinner with industrial styling
+        val bikeTypes = resources.getStringArray(R.array.bike_types)
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, bikeTypes)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
+        spinnerType.adapter = adapter
+
         // ACTION: Process Unit Entry
         btnAdd.setOnClickListener {
             val name = editBikeName.text.toString().trim()
@@ -38,7 +46,9 @@ class RegisterBikeActivity : AppCompatActivity() {
             else {
                 // DATA_PASSING: Direct injection into the Singleton GarageManager list.
                 // This updates the global state across the entire application lifecycle.
-                GarageManager.myGarage.add(Bike(name, typeValue))
+                val newBike = Bike(name, typeValue)
+                GarageManager.myGarage.add(newBike)
+                val newIndex = GarageManager.myGarage.size - 1
 
                 // STATUS: Operation Confirmation
                 val successMessage = "DETAILS: $name ($typeValue)\nADD TO GARAGE SUCCESS!"

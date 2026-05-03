@@ -45,6 +45,10 @@
             android:exported="false"
             android:windowSoftInputMode="stateHidden"/>
 
+        <activity android:name=".BikeDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden"/>
+
 
     </application>
 

@@ -11,6 +11,8 @@ import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
 import android.widget.Toast
 
+import android.content.Intent
+
 /**
  * UI_PROTOCOL: BikeAdapter handles the mapping of Bike data models to visual list components (RecyclerView).
  * It manages individual item state and user interactions (Edit/Delete).
@@ -33,6 +35,17 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
         holder.nameText.text = currentBike.name
         holder.typeText.text = "TYPE: ${currentBike.type}"
 
+        // ACTION: Open Details Activity on item click
+        holder.itemView.setOnClickListener {
+            val position = holder.bindingAdapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                val context = it.context
+                val intent = Intent(context, BikeDetailActivity::class.java)
+                intent.putExtra("BIKE_INDEX", position)
+                context.startActivity(intent)
+            }
+        }
+
         // ACTION: Initialize Context Menu for the specific unit
         holder.menuBtn.setOnClickListener { view ->
             val context = view.context
@@ -43,19 +56,22 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
             popup.menu.add("DELETE UNIT")
 
             popup.setOnMenuItemClickListener { item ->
+                val currentPosition = holder.bindingAdapterPosition
+                if (currentPosition == RecyclerView.NO_POSITION) return@setOnMenuItemClickListener false
+
                 when (item.title) {
                     "DELETE UNIT" -> {
-                        // PROTOCOL: DELETION_CONFIRMATION
+                        // PROTOCOL: DELETION CONFIRMATION
                         AlertDialog.Builder(context)
-                            .setTitle("CONFIRM_DELETION")
+                            .setTitle("CONFIRM DELETION")
                             .setMessage("Are you sure you want to remove ${currentBike.name} from the garage?")
                             .setPositiveButton("YES") { _, _ ->
                                 // DATA_MODIFICATION: Remove from the Singleton GarageManager
-                                GarageManager.myGarage.removeAt(holder.adapterPosition)
+                                GarageManager.myGarage.removeAt(currentPosition)
 
                                 // UI_SYNC: Immediate refresh of the list component
-                                notifyItemRemoved(holder.adapterPosition)
-                                notifyItemRangeChanged(holder.adapterPosition, itemCount)
+                                notifyItemRemoved(currentPosition)
+                                notifyItemRangeChanged(currentPosition, itemCount)
 
                                 Toast.makeText(context, "UNIT_REMOVED", Toast.LENGTH_SHORT).show()
                             }
@@ -63,7 +79,7 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
                             .show()
                         true
                     }
-                    "EDIT_UNIT" -> {
+                    "EDIT UNIT" -> {
                         Toast.makeText(context, "EDIT_MODE: COMING_SOON", Toast.LENGTH_SHORT).show()
                         true
                     }

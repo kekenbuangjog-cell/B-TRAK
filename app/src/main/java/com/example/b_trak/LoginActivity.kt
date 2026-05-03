@@ -37,12 +37,12 @@ class LoginActivity : AppCompatActivity() {
 
             // VALIDATION: Input check
             if (username.isEmpty() || password.isEmpty()) {
-                statusLabel.text = "STATUS: ERROR_EMPTY_FIELDS"
+                statusLabel.text = "STATUS: ERROR EMPTY FIELDS"
                 statusLabel.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_light))
             }
             // PROTOCOL: Hardcoded check for prototype access
             else if (username == "admin" && password == "1234") {
-                statusLabel.text = "STATUS: ACCESS_GRANTED"
+                statusLabel.text = "STATUS: ACCESS GRANTED"
                 statusLabel.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light))
 
                 // SYSTEM_TRANSITION: Launch Main Station and terminate Login Activity
@@ -52,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
             }
             else {
                 // EXCEPTION: Authentication Failure
-                statusLabel.text = "STATUS: AUTH_FAILED_INVALID_CRED"
+                statusLabel.text = "STATUS: AUTH FAILED INVALID CRED"
                 statusLabel.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_light))
                 inputPass.setText("")
             }

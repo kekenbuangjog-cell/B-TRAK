@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showShutdownDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("SYSTEM_SHUTDOWN")
+            .setTitle("SYSTEM SHUTDOWN")
             .setMessage("Are you sure you want to close and log out?")
             .setPositiveButton("CONFIRM") { _, _ ->
                 finishAffinity()
