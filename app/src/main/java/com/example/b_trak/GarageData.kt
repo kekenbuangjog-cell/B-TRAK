@@ -9,6 +9,7 @@ data class Bike(
     var name: String,
     var type: String,
     var odometer: Double = 0.0,
+    var iconResId: Int = R.drawable.logo_placeholder,
     val consumables: MutableList<Consumable> = mutableListOf()
 )
 

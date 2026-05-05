@@ -48,6 +48,7 @@ class BikeDetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.detail_bike_name).text = bike.name
         findViewById<TextView>(R.id.detail_bike_type).text = bike.type
         findViewById<TextView>(R.id.detail_total_km).text = bike.odometer.toString()
+        findViewById<android.widget.ImageView>(R.id.detail_bike_icon).setImageResource(bike.iconResId)
 
         findViewById<Button>(R.id.btn_update_odometer).setOnClickListener {
             showUpdateOdometerDialog()

@@ -44,9 +44,20 @@ class RegisterBikeActivity : AppCompatActivity() {
                 Toast.makeText(this, "ERROR: PLEASE SELECT A TYPE", Toast.LENGTH_SHORT).show()
             }
             else {
+                // ICON_MAPPING: Select appropriate icon based on the industrial type
+                val iconRes = when (typeValue) {
+                    "MTB XC (Cross Country)" -> R.drawable.ic_mountain_bike
+                    "ROAD AERO (Racing)" -> R.drawable.ic_road_bike
+                    "FIXED GEAR (City/Track)" -> R.drawable.ic_fixed_gear
+                    "GRAVEL EXPLORER (Adventure)" -> R.drawable.ic_gravel_explorer
+                    "BMX STREET (Trick/Park)" -> R.drawable.ic_bmx_street
+                    "COMMUTER BIKE(Ordinary)" -> R.drawable.ic_commuter_bike
+                    else -> R.drawable.logo_placeholder
+                }
+
                 // DATA_PASSING: Direct injection into the Singleton GarageManager list.
                 // This updates the global state across the entire application lifecycle.
-                val newBike = Bike(name, typeValue)
+                val newBike = Bike(name, typeValue, 0.0, iconRes)
                 GarageManager.myGarage.add(newBike)
                 val newIndex = GarageManager.myGarage.size - 1
 

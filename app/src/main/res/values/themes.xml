@@ -11,9 +11,9 @@
     <style name="Theme.BTRAK" parent="Base.Theme.BTRAK" />
 
     <style name="Theme.BTRAK.Splash" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowBackground">@color/industrial_bg</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:navigationBarColor">@color/industrial_bg</item>
+        <item name="android:windowBackground">@color/industrial_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
 
     </resources>

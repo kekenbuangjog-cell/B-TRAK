@@ -34,6 +34,7 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
         val currentBike = bikeList[position]
         holder.nameText.text = currentBike.name
         holder.typeText.text = "TYPE: ${currentBike.type}"
+        holder.iconImage.setImageResource(currentBike.iconResId)
 
         // ACTION: Open Details Activity on item click
         holder.itemView.setOnClickListener {
@@ -102,5 +103,6 @@ class BikeAdapter(private val bikeList: List<Bike>) : RecyclerView.Adapter<BikeA
         val nameText: TextView = itemView.findViewById(R.id.text_item_name)
         val typeText: TextView = itemView.findViewById(R.id.text_item_type)
         val menuBtn: ImageView = itemView.findViewById(R.id.btn_item_menu)
+        val iconImage: ImageView = itemView.findViewById(R.id.img_bike_icon)
     }
 }
