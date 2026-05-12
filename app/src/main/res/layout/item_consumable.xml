@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="PART_NAME"
+            android:text="PART NAME"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="14sp"
             android:fontFamily="monospace"
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LAST_REPLACED"
+                android:text="LAST REPLACED"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="9sp"
                 android:fontFamily="monospace"/>
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SERVICE_INTERVAL"
+                android:text="SERVICE INTERVAL"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="9sp"
                 android:fontFamily="monospace"/>

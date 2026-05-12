@@ -91,6 +91,17 @@
             android:background="@drawable/spinner_industrial_bg"
             android:layout_marginBottom="48dp"
             android:spinnerMode="dropdown" />
+        <CheckBox
+            android:id="@+id/check_is_second_hand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THIS IS A SECOND-HAND BIKE (UNKNOWN HISTORY)"
+            android:textColor="?android:attr/textColorSecondary"
+            android:fontFamily="monospace"
+            android:textSize="10sp"
+            android:layout_marginBottom="24dp"
+            android:buttonTint="@color/industrial_orange"/>
+
         <Button
             android:id="@+id/btn_add_to_garage"
             android:layout_width="match_parent"

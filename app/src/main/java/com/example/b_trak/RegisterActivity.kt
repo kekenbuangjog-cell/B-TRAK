@@ -7,31 +7,36 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * REGISTRATION_PROTOCOL: Placeholder for account creation services.
- * Currently serves as a UI prototype for account expansion.
+ * RegisterActivity provides the UI for creating a new user account.
+ * In the current prototype phase, it serves as a visual placeholder for future database integration.
  */
 class RegisterActivity : AppCompatActivity() {
 
+    /**
+     * Initializes the registration UI and sets up dummy logic for the registration process.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Bind the Activity to the registration XML layout
         setContentView(R.layout.activity_register)
 
-        // UI_BINDING: Identify return navigation and registration trigger
+        // Find the "Back to Login" text link and the "Register" button in the layout
         val btnLoginLink = findViewById<TextView>(R.id.text_back_to_login)
         val btnRegister = findViewById<Button>(R.id.btn_register_account)
 
-        // NAVIGATION: Return to the Authentication Station
+        // Configure the back link to close this activity and return to the previous screen (LoginActivity)
         btnLoginLink.setOnClickListener {
-            // PROTOCOL: Termination of current context to reveal previous Activity
+            // Terminates the current activity lifecycle
             finish()
         }
 
-        // ACTION: Initiate Registration Protocol (Placeholder)
+        // Configure the registration button to simulate a data transmission process
         btnRegister.setOnClickListener {
-            // STATUS: Mocking data uplink for the prototype
-            Toast.makeText(this, "INITIALIZING_DATA_UPLINK...", Toast.LENGTH_SHORT).show()
+            // Display a Toast message to the user simulating a background "Uplink" process
+            Toast.makeText(this, "INITIALIZING DATA UPLINK...", Toast.LENGTH_SHORT).show()
 
-            // FUTURE_INTEGRATION: SQLite/Room database implementation scheduled for Sprint 2.
+            // NOTE: The actual persistence logic (SQLite/Room) is scheduled for the next development sprint.
+            // Currently, no data is actually saved here.
         }
     }
 }

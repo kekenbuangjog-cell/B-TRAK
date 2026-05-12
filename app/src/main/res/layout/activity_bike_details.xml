@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/windowBackground"
@@ -66,7 +67,8 @@
                 android:padding="16dp"
                 android:background="@drawable/industrial_input"
                 android:backgroundTint="@color/industrial_surface"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                app:tint="?android:attr/textColorPrimary"/>
 
             <TextView
                 android:id="@+id/detail_bike_name"
@@ -153,7 +155,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CONSUMABLE_COMPONENTS"
+            android:text="PREVENTIVE MAINTENANCE"
             android:textColor="@color/industrial_orange"
             android:textSize="12sp"
             android:fontFamily="monospace"
@@ -161,32 +163,31 @@
             android:layout_marginBottom="12dp"/>
 
         <LinearLayout
-            android:id="@+id/consumables_container"
+            android:id="@+id/preventive_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="32dp">
-            
-            <include 
-                android:id="@+id/consumable_chain"
-                layout="@layout/item_consumable" />
-            
-            <include 
-                android:id="@+id/consumable_front_tire"
-                layout="@layout/item_consumable" />
-            
-            <include 
-                android:id="@+id/consumable_rear_tire"
-                layout="@layout/item_consumable" />
-            
-            <include 
-                android:id="@+id/consumable_front_brake"
-                layout="@layout/item_consumable" />
-            
-            <include 
-                android:id="@+id/consumable_rear_brake"
-                layout="@layout/item_consumable" />
+            <!-- Dynamic Injection Points -->
+        </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIFECYCLE MONITORING"
+            android:textColor="@color/industrial_orange"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/lifecycle_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+            <!-- Dynamic Injection Points -->
         </LinearLayout>
 
     </LinearLayout>

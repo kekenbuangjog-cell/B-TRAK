@@ -16,6 +16,8 @@
     <color name="text_main">#121212</color>
     <color name="text_sub">#4D4D4D</color>
     <color name="industrial_destructive_bg">#E0E0E0</color>
+    <color name="industrial_green">#4CAF50</color>
+    <color name="industrial_red">#F44336</color>
     <color name="switch_track">#BDBDBD</color>
 
 </resources>

@@ -33,7 +33,7 @@
             android:id="@+id/text_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BIKE_NAME"
+            android:text="BIKE NAME"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="16sp"
             android:fontFamily="monospace"
