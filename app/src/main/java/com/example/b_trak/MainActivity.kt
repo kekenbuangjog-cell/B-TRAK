@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         val btnSettings = findViewById<ImageView>(R.id.btn_settings)
         btnSettings.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
+            intent.putExtra("USER_ID", userId)
             startActivity(intent)
         }
 

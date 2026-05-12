@@ -85,6 +85,7 @@
             android:layout_marginBottom="24dp">
 
             <TextView
+                android:id="@+id/text_profile_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UserMe"
@@ -92,14 +93,6 @@
                 android:textSize="16sp"
                 android:fontFamily="monospace"
                 android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kein.ivan@example.com"
-                android:textColor="?android:attr/textColorSecondary"
-                android:textSize="11sp"
-                android:fontFamily="monospace"/>
         </LinearLayout>
 
         <TextView

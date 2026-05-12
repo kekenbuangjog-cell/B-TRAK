@@ -5,14 +5,19 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Switch
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 /**
  * SettingsActivity allows users to customize their application experience.
  * Currently, it manages the theme toggle (Dark/Light mode) and session termination (Logout).
  */
 class SettingsActivity : AppCompatActivity() {
+
+    private var userId: Int = -1
 
     /**
      * Initializes the settings UI, synchronizes the theme switch state, and sets up click listeners.
@@ -21,6 +26,11 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // Bind the Activity to the settings XML layout
         setContentView(R.layout.activity_settings)
+
+        userId = intent.getIntExtra("USER_ID", -1)
+        if (userId != -1) {
+            loadUserProfile()
+        }
 
         // Find the back arrow icon and set its listener
         val btnBack = findViewById<ImageView>(R.id.btn_back)
@@ -55,6 +65,17 @@ class SettingsActivity : AppCompatActivity() {
             // SECURITY: Clear the entire activity back-stack so the user cannot navigate back into the garage
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent) // Execute the transition
+        }
+    }
+
+    private fun loadUserProfile() {
+        lifecycleScope.launch {
+            val db = AppDatabase.getDatabase(this@SettingsActivity)
+            val user = db.userDao().getUserById(userId)
+            
+            user?.let {
+                findViewById<TextView>(R.id.text_profile_username).text = it.username
+            }
         }
     }
 }
